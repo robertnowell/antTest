@@ -1,6 +1,14 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import {Button, DatePicker, version, PageHeader, Menu} from 'antd';
 import 'antd/dist/antd.css';
 import './index.css';
 import styled from 'styled-components';
+import {Selectedfalse3, Selectedtrue1} from './components/taskCard';
+import {SidebarDesktop1} from './components/sidebar';
+import {HeaderDefault1} from './components/header';
+import Search from 'antd/lib/input/Search';
+import profilePhoto from './Rectangle214.png';
 
 import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
@@ -11,7 +19,7 @@ export default function App() {
             <div>
                 <Switch>
                     <Route path="/" exact>
-                        <HeaderLoggedIn21 />
+                        <NewRoot1 />
                     </Route>
                 </Switch>
             </div>
@@ -19,208 +27,103 @@ export default function App() {
     );
 }
 
-export const HeaderLoggedIn21 = ({}) => {
-    return <HeaderLoggedIn1 className={'none'} />;
-};
-const HeaderLoggedIn1 = ({className}) => {
+export const NewRoot1 = ({}) => {
+    const onSearch = () => {};
     return (
-        <HeaderLoggedIn className={className}>
-            <Group>
-                <Group105
-                    src={
-                        'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/ecac6dec-924b-43cf-ae31-a9620cc8ef52.svg?alt=media&token=efdc9bfb-deb6-4e9f-bb8a-85d128466a6e'
-                    }
-                />
-                <Rectangle223>
-                    <Beta>Beta</Beta>
-                </Rectangle223>
-            </Group>
-            <Rectangle3>
-                <Search1
-                    src={
-                        'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/d5ba6524-8b69-49ad-9b4d-29f3a486aa77.svg?alt=media&token=d5cea140-a16b-41cf-80fb-78919406f6b8'
-                    }
-                />
-                <Search>Search...</Search>
-            </Rectangle3>
-            <ExploreClasses>Explore Classes</ExploreClasses>
-            <MyClasses>My Classes</MyClasses>
-            <Notifications>Notifications</Notifications>
-            <Group2>
-                <Ellipse1
-                    src={
-                        'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/b50c3759-df14-4cf5-bf01-069c59ba16db.svg?alt=media&token=412492fc-e1e3-4364-8524-8feebb6c6372'
-                    }
-                />
-                <_2>2</_2>
-            </Group2>
-            <Rectangle214
-                src={
-                    'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/8a17a0a8-c0a5-4235-ae45-cfeb2fec1a51.png?alt=media&token=6f137573-3eb6-4648-a062-e7eee74f2acb'
-                }
-            />
-        </HeaderLoggedIn>
+        <NewRootRoot>
+            <HeaderLoggedIn2>
+                <RightGroup>
+                    <Logo2
+                        src={
+                            'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/ed38cce8-9c23-4ee8-a221-6811439f7e73.svg?alt=media&token=f103c5a8-7318-4999-8da7-abac878504f2'
+                        }
+                    />
+                    <Search placeholder="input search text" onSearch={onSearch} style={{width: 200}} />
+                </RightGroup>
+                <LeftGroup2>
+                    <ExploreClasses>Explore Classes</ExploreClasses>
+                    <MyClasses>My Classes</MyClasses>
+                    <Notifications>Notifications</Notifications>
+                    <NotifCount>
+                        <Count>2</Count>
+                    </NotifCount>
+                    <ProfileImage
+                        src={
+                            'https://firebasestorage.googleapis.com/v0/b/rendition-prod.appspot.com/o/7b475b2f-5957-4969-bf63-aefad1a2585a.png?alt=media&token=cde4fb52-75da-4210-ab87-d4aa95a42272'
+                        }
+                    />
+                </LeftGroup2>
+            </HeaderLoggedIn2>
+        </NewRootRoot>
     );
 };
-const HeaderLoggedIn = styled.div`
-    width: 1240px;
+
+const LeftGroup2 = styled.div`
+    width: 400px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    align-self: left;
+    justify-content: space-between;
     align-items: center;
 `;
-const Group = styled.div`
-    align-self: stretch;
-    width: 147.18px;
-    margin-right: 64.04px;
-    height: 70px;
-    position: relative;
-`;
-const Group105 = styled.img`
-    width: 147.18px;
-    height: 44px;
-    position: absolute;
-    top: 13px;
-    left: 0;
-`;
-const Rectangle223 = styled.div`
-    background-color: #000000;
-    position: absolute;
-    top: 8px;
-    left: 58px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    border-radius: 2px;
-`;
-const Beta = styled.div`
-    color: #ffffff;
-    text-align: center;
-    width: 26px;
-    height: 12px;
-    font-size: 6px;
-    font-family: Poppins;
-    font-weight: 600;
-    letter-spacing: 0.6px;
-    line-height: 9.6px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-`;
-const Rectangle3 = styled.div`
-    border-width: 1px;
-    border-color: #000000;
-    border-style: solid;
-    width: 120px;
-    margin-right: 363.78px;
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 15px;
-    padding-left: 6px;
-    padding-right: 6px;
-    align-items: center;
-    border-radius: 10px;
-`;
-const Search1 = styled.img`
-    width: 16px;
-    height: 16px;
-`;
-const Search = styled.div`
-    color: #000000;
-    width: 78px;
-    height: 46px;
-    font-size: 14px;
-    font-family: Poppins;
+
+const ExploreClasses = styled.button`
+    cursor: pointer;
+    border: none;
+    background: none;
     font-weight: 500;
-    line-height: 22.4px;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: left;
-    justify-content: center;
 `;
-const ExploreClasses = styled.div`
-    color: #000000;
-    text-align: right;
-    width: 120px;
-    height: 70px;
-    font-size: 14px;
-    font-family: Poppins;
-    font-weight: 500;
-    line-height: 18.2px;
-    margin-right: 74px;
-    align-self: stretch;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: center;
-`;
+
 const MyClasses = styled.div`
-    color: #000000;
-    text-align: right;
-    width: 83px;
-    height: 70px;
-    font-size: 14px;
-    font-family: Poppins;
+    cursor: pointer;
+    border: none;
+    background: none;
     font-weight: 500;
-    line-height: 18.2px;
-    margin-right: 62px;
-    display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: center;
 `;
+
 const Notifications = styled.div`
-    color: #000000;
-    text-align: right;
-    width: 91px;
-    height: 70px;
-    font-size: 14px;
-    font-family: Poppins;
+    cursor: pointer;
+    border: none;
+    background: none;
     font-weight: 500;
-    line-height: 18.2px;
-    margin-right: 6px;
+`;
+
+const NewRootRoot = styled.div``;
+
+const HeaderLoggedIn2 = styled.div`
+    margin-left: 20px;
+    margin-right: 20px;
     display: flex;
-    flex-direction: column;
-    align-items: right;
-    justify-content: center;
-`;
-const Group2 = styled.div`
-    align-self: stretch;
-    width: 20px;
-    margin-right: 37px;
-    height: 70px;
-    position: relative;
-`;
-const Ellipse1 = styled.img`
-    width: 20px;
-    height: 20px;
-    box-shadow: 1px 1px 0px 0px #000000;
-    position: absolute;
-    top: 25px;
-    left: 0;
-`;
-const _2 = styled.div`
-    color: #000000;
-    text-align: center;
-    width: 20px;
-    height: 20px;
-    font-size: 12px;
-    font-family: Poppins;
-    font-weight: 600;
-    line-height: 15.6px;
-    position: absolute;
-    top: 25px;
-    left: 0;
-    display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
+`;
+
+const Logo2 = styled.img``;
+
+const NotifCount = styled.div`
+    width: 20px;
+    background: yellow;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+`;
+
+const Count = styled.div`
+    font-size: 12px;
+    font-weight: 600;
+    display: flex;
     justify-content: center;
 `;
-const Rectangle214 = styled.img`
+
+const ProfileImage = styled.img`
     width: 40px;
     height: 40px;
     border-radius: 8px;
+`;
+
+const RightGroup = styled.div`
+    width: 500px;
+    display: flex;
+    align-self: right;
+    justify-content: space-between;
+    align-items: center;
 `;
